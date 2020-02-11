@@ -5,10 +5,10 @@
   "main": "./dist/codemirror-colorpicker.js",
   "scripts": {
     "pub": "npm run build && npm publish",
-    "build": "NODE_ENV=production rollup --config config/rollup.config.prod.js",
-    "dev": "NODE_ENV=development rollup -w --config config/rollup.config.dev.js",
+    "build": "cross-env NODE_ENV=production & rollup --config config/rollup.config.prod.js",
+    "dev": "cross-env NODE_ENV=development & rollup -w --config config/rollup.config.dev.js",
     "docs": "http-server ./docs",
-    "test": "NODE_ENV=test jest --watch"
+    "test": "cross-env NODE_ENV=test & jest --watch"
   },
   "repository": {
     "type": "git",
@@ -46,7 +46,7 @@
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-minify": "^0.2.0",
     "codemirror": "^5.48.0",
-    "cross-env": "^5.1.1",
+    "cross-env": "^5.2.1",
     "http-server": "^0.11.1",
     "jest": "^22.4.2",
     "jest-cli": "^22.4.2",
