@@ -955,7 +955,7 @@
             nextFormat();
         }
 
-        function () {
+        function initEvent() {
             addEvent($color.el, 'mousedown', EventColorMouseDown);
             addEvent($color.el, 'mouseup', EventColorMouseUp);
             addEvent($drag_bar.el, 'mousedown', EventDragBarMouseDown);
