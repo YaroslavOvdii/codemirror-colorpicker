@@ -963,8 +963,8 @@
             addEvent($hexCode.el, 'keydown', EventHexCodeKeyDown);
             addEvent($hexCode.el, 'keyup', EventHexCodeKeyUp);
 
-            addEvent($rgb_r.el, 'keydown', checkNumberKey);
-            addEvent($rgb_r.el, 'keyup', setRGBtoHexColor);
+            addEvent($rgb_r.el, 'blur', checkNumberKey);
+            addEvent($rgb_r.el, 'blur', setRGBtoHexColor);
             addEvent($rgb_g.el, 'keydown', checkNumberKey);
             addEvent($rgb_g.el, 'keyup', setRGBtoHexColor);
             addEvent($rgb_b.el, 'keydown', checkNumberKey);

@@ -8195,7 +8195,7 @@ var ColorInformation = function (_UIElement) {
             this.changeHslColor();
         }
     }, {
-        key: 'keyup $hexCode',
+        key: 'blur $hexCode',
         value: function keyup$hexCode(e) {
             var code = this.refs.$hexCode.val();
 
