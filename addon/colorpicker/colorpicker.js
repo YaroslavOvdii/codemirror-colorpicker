@@ -812,6 +812,7 @@
         }
 
         function checkNumberKey(e) {
+            debugger
             var code = e.which,
                 isExcept = false;
 
@@ -825,6 +826,7 @@
         }
 
         function setRGBtoHexColor(e) {
+            debugger
             var r = $rgb_r.val(),
                 g = $rgb_g.val(),
                 b = $rgb_b.val();
@@ -953,7 +955,7 @@
             nextFormat();
         }
 
-        function initEvent() {
+        function () {
             addEvent($color.el, 'mousedown', EventColorMouseDown);
             addEvent($color.el, 'mouseup', EventColorMouseUp);
             addEvent($drag_bar.el, 'mousedown', EventDragBarMouseDown);
@@ -965,10 +967,10 @@
 
             addEvent($rgb_r.el, 'blur', checkNumberKey);
             addEvent($rgb_r.el, 'blur', setRGBtoHexColor);
-            addEvent($rgb_g.el, 'keydown', checkNumberKey);
-            addEvent($rgb_g.el, 'keyup', setRGBtoHexColor);
-            addEvent($rgb_b.el, 'keydown', checkNumberKey);
-            addEvent($rgb_b.el, 'keyup', setRGBtoHexColor);
+            addEvent($rgb_g.el, 'blur', checkNumberKey);
+            addEvent($rgb_g.el, 'blur', setRGBtoHexColor);
+            addEvent($rgb_b.el, 'blur', checkNumberKey);
+            addEvent($rgb_b.el, 'blur', setRGBtoHexColor);
 
             addEvent(document, 'mouseup', EventDocumentMouseUp);
             addEvent(document, 'mousemove', EventDocumentMouseMove);
