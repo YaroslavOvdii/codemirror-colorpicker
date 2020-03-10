@@ -295,11 +295,8 @@ export default class BaseColorPicker extends UIElement {
         this.__isMouseIn = false; 
         if (!this.__isMouseDown) {
             clearTimeout(this.timerCloseColorPicker);
-            var waitTime = this.delayTime || this.hideDelay;
-
-            if (waitTime > 0) {
-                this.timerCloseColorPicker = setTimeout(this.hide.bind(this), waitTime);
-            }
+            debugger
+            this.timerCloseColorPicker = setTimeout(this.hide.bind(this), this.delayTime || this.hideDelay);
         }
     }
 
